@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(133, 98, 56, 0.445);
+    padding: 5% 20%;
+    display: flex;
+    
+}
+
+.news {
+    width: 50%;
+}
+
+.news p {
+    padding-top: 20px;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    margin-top: 10px;
+    height: 50px;
+    width: 80%;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid black;
+}
+
+[type="text"] {
+    padding: 10px;
+}
+
+button {
+    margin-top: 10px;
+    height: 50px;
+    width: 80%;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+}
