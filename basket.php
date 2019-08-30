@@ -1,4 +1,5 @@
 <?php 
+    //Добавлен комментарий
     $headerConfig = [
         'title'=>'Корзина',
         'styles'=>['style.css', 'basket.css']
