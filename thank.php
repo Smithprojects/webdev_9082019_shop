@@ -12,3 +12,7 @@
     ];
     include('modules/footer.php');
 ?>
+
+<?php 
+test 
+?>
