@@ -105,37 +105,55 @@
     
     <form class="basket__form form" action="handlers/form.php" method="POST">
         <div class="form__block">
-            <label class="form__label" for="delivery-id">Выберите вариант доставки</label>
-            <select class="form__select" id="delivery-id" name="delivery-option" required>
-                <option class="select__value" value="500">Курьерская служба - 500 руб.</option>
-                <option class="select__value" value="0">Самовывоз - 0 руб.</option>
-                <option class="select__value" value="100">Пункты выдачи - 100 руб.</option>
-            </select>
+            <div class="form__block__select select">
+                <label class="select__label" for="delivery-id">Выберите вариант доставки</label>
+                <select class="select__select" id="delivery-id" name="delivery-option" required>
+                    <option class="select__value" value="500">Курьерская служба - 500 руб.</option>
+                    <option class="select__value" value="0">Самовывоз - 0 руб.</option>
+                    <option class="select__value" value="100">Пункты выдачи - 100 руб.</option>
+                </select>
+            </div>
             
-            <label class="form__label" for="name-id">Имя</label>
-            <input class="form__input" id="name-id" type="text" name="name" placeholder="Имя" value="">
-
-            <label class="form__label" for="surname-id">Фамилия</label>
-            <input class="form__input" id="surname-id" type="text" name="surname" placeholder="Фамилия" value="">
-            
-            <label class="form__label" for="adress-id">Адрес</label>
-            <input class="form__input" id="adress-id" type="text" name="adress" placeholder="Адрес" value="">
-            
-            <label class="form__label" for="city-id">Город</label>
-            <input class="form__input" id="city-id" type="text" name="city" placeholder="Город" value="">
-            
-            <label class="form__label" for="index-id">Индекс</label>
-            <input class="form__input" id="index-id" type="text" name="index" placeholder="Индекс" value="">
-                                                        
-            <label class="form__label" for="phone-id">Телефон</label>
-            <input class="form__input" id="phone-id" type="text" name="phone" placeholder="+7(905) 184-81-40" value="">
-
-            <label class="form__label" for="email-id">Email</label>
-            <input class="form__input" id="email-id" type="text" name="email" placeholder="Электронная почта" value="">
+            <div class="form__block__input input">
+                <div class="input__block input__block_fl-l input__block_pd-r">
+                    <label class="input__block__label" for="name-id">Имя</label>
+                    <input class="input__block__input" id="name-id" type="text" name="name" placeholder="Имя" value="">
+                </div>
+                <div class="input__block input__block_pd-l">
+                    <label class="input__block__label" for="surname-id">Фамилия</label>
+                    <input class="input__block__input" id="surname-id" type="text" name="surname" placeholder="Фамилия" value="">
+                </div>
+            </div>
+            <div class="form__block__input input">
+                <div class="input__block input__block_wh-100">
+                    <label class="input__block__label" for="adress-id">Адрес</label>
+                    <input class="input__block__input" id="adress-id" type="text" name="adress" placeholder="Адрес" value="">
+                </div>
+            </div>
+                      
+            <div class="form__block__input input">
+                <div class="input__block input__block_fl-l input__block_pd-r">
+                    <label class="input__block__label" for="city-id">Город</label>
+                    <input class="input__block__input" id="city-id" type="text" name="city" placeholder="Город" value="">
+                </div>
+                <div class="input__block input__block_pd-l">
+                    <label class="input__block__label" for="index-id">Индекс</label>
+                    <input class="input__block__input" id="index-id" type="text" name="index" placeholder="Индекс" value="">
+                </div>
+            </div>
+           
+            <div class="form__block__input input">
+                <div class="input__block input__block_fl-l input__block_pd-r">
+                    <label class="input__block__label" for="phone-id">Телефон</label>
+                    <input class="input__block__input" id="phone-id" type="text" name="phone" placeholder="+7(905) 184-81-40" value="">
+                </div>
+                <div class="input__block input__block_pd-l">
+                    <label class="input__block__label" for="email-id">Email</label>
+                    <input class="input__block__input" id="email-id" type="text" name="email" placeholder="Электронная почта" value="">
+                </div>
+            </div>
         </div>
-            
-   
-        
+      
         <div class="basket__payment payment ">
             <div class="payment__head head">
                 <h1 class="head__title">Варианты оплаты</h1>
@@ -149,7 +167,7 @@
             </div>
           
             <div class="payment__options">
-                <label class="form__label" for="payment-id">Выберите способ оплаты</label>
+                <label class="payment__label" for="payment-id">Выберите способ оплаты</label>
                 <select class="payment__select" id="payment-id" name="payment-select" required>
                     <option class="select-value" value="card">Банковская карта</option>
                     <option class="select-value" value="score">По счету</option>
