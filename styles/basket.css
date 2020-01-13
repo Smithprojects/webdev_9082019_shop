@@ -125,6 +125,23 @@
   border-radius: 3px;
   color: grey;
   width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.form__block .select__select::after {
+  content: "dsfsdfsdf";
+  display: block;
+  border-style: solid;
+  border-width: 6px 5px 0 5px;
+  border-color: #000 transparent transparent transparent;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  z-index: 1;
+  margin-top: -3px;
 }
 
 .form__block .input__block {
@@ -226,5 +243,8 @@
   border: 1px solid grey;
   border-radius: 3px;
   color: grey;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 /*# sourceMappingURL=basket.css.map */
