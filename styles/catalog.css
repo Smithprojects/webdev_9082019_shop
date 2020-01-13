@@ -1,13 +1,85 @@
+.catalog {
+  padding-top: 30px;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+
+.catalog-head {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 25px;
+  padding: 15px 0;
+}
+
+.catalog-desc {
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+  color: gray;
+}
+
+.catalog-filters {
+  padding: 30px 0px;
+}
+
+.catalog-filters-select {
+  border: 1px solid black;
+  border-radius: 3px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  padding: 5px 30px;
+}
+
+.catalog-filters-select::after {
+  content: 'ghdfsdfsdfsdfsfsfsdfdsfsfsfg';
+  background: url(../images/icons/fb.png) 3px 4px no-repeat;
+  width: 24px;
+  display: inline-block;
+  height: 22px;
+  vertical-align: top;
+  right: 5px;
+  top: 5px;
+}
+
+.catalog-products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100%;
+}
+
 .catalog-products-item {
-  border: 1px solid gray;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 50px;
 }
 
 .catalog-products-item-pic {
-  width: 100px;
+  width: 200px;
   height: 200px;
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
+  border: 1px solid gray;
+  margin-bottom: 20px;
+}
+
+.catalog-products-item-name {
+  font-weight: bold;
+}
+
+.catalog-products-item-price {
+  padding: 10px 0;
 }
 
 .catalog-pagination {
@@ -17,6 +89,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  left: 0;
 }
 
 .catalog-pagination-item {

@@ -4,12 +4,12 @@
 <!-- BEM GULP  -->
 
 <?php
-    slava.zhukov@gmail.com
+    //slava.zhukov@gmail.com
     session_start();
     session_destroy();
 ?>
 
-<?php if ( $_SESSION['admin'] ):?>
+<?php /**if ( $_SESSION['admin'] ):**/?>
 <!doctype html>
 <html lang="ru">
   <head>
@@ -91,8 +91,8 @@
   </body>
 </html>
 
-<?php else: ?>
+<?php /**else:**/ ?>
 
 <h1>Идите вон!</h1>
 
-<?php endif;?>
+<?php /**endif;**/?>

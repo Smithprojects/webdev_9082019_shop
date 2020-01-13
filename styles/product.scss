@@ -1,14 +1,3 @@
-// общие стили
-@import url('/styles/blocks/common/reset.css');
-@import url('/styles/blocks/common/common.css');
-@import url('/styles/blocks/common/body.css');
-@import url('/styles/blocks/common/wrapper.css');
-
-// шапка сайта
-@import url('/styles/blocks/header/logo.css');
-@import url('/styles/blocks/header/menu.css');
-@import url('/styles/blocks/header/icon-block.css');
-
 // GULP - сборщик приложений
 // добавить прфеиксы к свойствам
 // сжать файл 
@@ -16,6 +5,93 @@
 
 // npm - node package manager
 // node JS - серверный язык программирования JS
+
+.product {
+    flex: 1;
+
+    &__img{
+        //margin: 0 auto;
+        padding: 50px 30px;
+        text-align: center;
+
+        img {
+            width: 500px;
+            height: 500px;
+        }
+    }
+
+    &__info {
+        text-align: center;
+    }
+
+    &__name {
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight:bold;
+        padding: 5px;
+
+    }
+
+    &__sku {
+        font-size: 10px;
+        color: grey;
+        font-style: italic;
+
+    }
+
+    &__price {
+        font-size: 18px;
+        color: grey;
+        font-style: italic;
+        padding: 20px;
+    }
+
+    &__description {
+        font-size: 18px;
+        color: grey;
+
+    }
+
+    &__size {
+        font-size: 18px;
+        color: grey;
+        padding: 20px;
+
+    }
+
+    .size {
+        
+
+        &__name {
+            text-transform: uppercase;
+            font-size: 18px;
+
+        }
+
+        &__number {
+            display: flex;
+            justify-content: center;
+
+            .number {
+                padding: 10px;
+                border: 1px solid black;
+                margin: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__btn {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        padding: 20px;
+        text-transform: uppercase;
+        background-color:orange;
+        color:white;
+        border: none;
+    }
+}
 
 
 

@@ -1,0 +1,314 @@
+.main {
+    flex: 1;
+    text-align: center;
+
+    &__header {
+        text-transform: uppercase;
+        font-size: 32px;
+        font-weight: bold;
+        padding-top: 50px;
+    }
+
+    &__text {
+        font-style: italic;
+        color: grey;
+        font-size: 24px;
+        padding-top: 15px;
+        padding-bottom: 40px;
+    }
+
+    &__btn-news {
+        padding: 20px;
+        text-transform: uppercase;
+        background-color:white;
+        color:grey;
+        border: 1px solid gray;
+
+    }
+
+    &__info {
+        padding-top: 50px;
+        width: 100%;
+        //height: 400px;
+
+        &__left {
+            width: 50%;
+            float: left;
+        }
+
+        &__right {
+            width: 50%;
+            overflow: hidden;
+        }
+    }
+
+    .info {
+
+        &__ferst {
+
+        }
+
+        .ferst {
+            width: 100%;
+            height: 471px;
+
+            &__arrival {
+                //position: relative;
+                //float: left;
+                width: 50%;
+                height: 100%;
+
+                &_fl-l {
+                    float: left;
+                }
+
+                &_fl-r {
+                    float: right;
+                }
+
+                &__img {
+                    //background: url(/images/1.jpg) center center / cover no-repeat;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+
+                    &_pic-one {
+                        background: url(/images/1.jpg) center center / cover no-repeat;
+                    }
+
+                    &_pic-two {
+                        background: url(/images/4.jpg) center center / cover no-repeat;
+                    }
+                    
+                    &__text {
+                        text-transform: uppercase;
+                        color:white;
+                        position:absolute;
+                        right: 0;
+                        left: 0;
+                        top: 50%;
+                    }
+                }
+            }
+
+            &__advertising {
+                width: 50%;
+                overflow: hidden;
+                height: 100%;
+
+                .advertising {
+                    
+                    &__novelty {
+                        width: 100%;
+                        height: 50%;
+                        background-color:gray;
+                        //line-height: 50%;
+                        opacity: 0.5;
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+
+                        &__icon {
+                            color: white;
+                            border: 1px solid white;
+                            border-radius: 50%;
+                            width: 25px;
+                            height: 25px;
+                            font-weight: bold;
+                            line-height: 25px;
+                            display: inline-block;
+                            margin-top: 20%;
+                            position: relative;
+
+                            &::before {
+                                content: '';
+                                width: 20px;
+                                height: 1px;
+                                top: 50%;
+                                left: -30px;
+                                position: absolute;
+                                background-color:white;
+                            }
+
+                            &::after {
+                                content: '';
+                                width: 20px;
+                                height: 1px;
+                                top: 50%;
+                                right: -30px;
+                                position: absolute;
+                                background-color:white;
+                            }
+                        }
+        
+                        &__text {
+                            padding: 20px 30px 30px 30px;
+                            color: white;
+                            font-style: italic;
+        
+                        }
+                    }
+
+                    &__min-price {
+                        width: 100%;
+                        height: 50%;
+
+                        &__img {
+                            //background: url(/images/2.jpg) center center / cover no-repeat;
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+
+                            &_pic-one {
+                                background: url(/images/2.jpg) center center / cover no-repeat;
+                            }
+        
+                            &_pic-two {
+                                background: url(/images/6.jpg) center center / cover no-repeat;
+                            }
+        
+                            &__text {
+                                text-transform: uppercase;
+                                color:white;
+                                position:absolute;
+                                right: 0;
+                                left: 0;
+                                top: 50%;
+
+                                span {
+                                    text-transform: lowercase;
+                                    font-style: italic;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__next {
+            width: 100%;
+            height: 235.5px;
+        }
+
+        .next {
+
+            &__pic {
+                width: 50%;
+                height: 100%;
+                float: left;
+
+                &__img {
+                    //background: url(/images/5.jpg) center center / cover no-repeat;
+                    width: 100%;
+                    height: 100%;
+
+                    &_pic-one {
+                        background: url(/images/5.jpg) center center / cover no-repeat;
+                    }
+
+                    &_pic-two {
+                        background: url(/images/3.jpg) center center / cover no-repeat;
+                    }
+
+                }
+
+            }
+
+            &__text {
+                width: 50%;
+                height: 100%;
+                background-color:gray;
+                overflow: hidden;
+                opacity: 0.5;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+
+                &__icon {
+                    font-weight: bold;
+                    color: white;
+                    display:inline-block;
+                    margin-top: 30%;
+                    font-size: 20px;
+
+                }
+
+                &__p {
+                    padding: 10px 30px 30px 30px;
+                    color: white;
+                    text-transform: uppercase;
+
+                    span {
+                        font-style: italic;
+                        font-size: 12px;
+                    }
+
+                }
+            }
+        }
+    }
+
+    &__sudscribe {
+
+    }
+
+    .subscribe {
+        padding-top: 100px;
+
+        &__header {
+            text-transform: uppercase;
+            font-size: 32px;
+            padding-bottom: 10px;
+        }
+
+        &__text {
+            font-style: italic;
+            color:grey;
+        }
+
+        &__main-form {
+            padding-top: 20px;
+        }
+
+        .main-form {
+
+
+            &__inp {
+                width: 40%;
+                height: 45px;
+                box-sizing: border-box;
+                border: 1px solid gray;
+                border-right: none;
+
+                &[type='text'] {
+                    padding-left: 15px;
+                    font-style: italic;
+                }
+            }
+
+            &__btn-subscribe {
+                width: 15%;
+                height: 45px;
+                box-sizing: border-box;
+                border: none;
+                color:white;
+                background-color:orange;
+                
+            }
+        }
+
+        &__error {
+            font-style: italic;
+            padding-top: 10px;
+            visibility: hidden;
+        }
+
+        &__error.active {
+            color: red;
+            visibility: visible
+        }
+    }
+}

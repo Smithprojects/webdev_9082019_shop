@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js</title>
+</head>
+<body>
+    <div class="app">
+        {{title}}
+    </div>
+    <div class="counter">
+        {{count}}
+        <button v-on:click="play">play</button>
+        <button v-if="isStart" v-on:click="onClick">Клик: {{countClick}}</button>
+        <button v-if="isFinish" v-on:click="onResume">Начать заново</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,2 +1,64 @@
-@import url("reset.css");
+@import url("/styles/blocks/common/reset.css");
+@import url("/styles/blocks/common/common.css");
+@import url("/styles/blocks/common/body.css");
+@import url("/styles/blocks/common/wrapper.css");
+@import url("/styles/blocks/common/fonts.css");
+@import url("/styles/blocks/header/logo.css");
+@import url("/styles/blocks/header/menu.css");
+@import url("/styles/blocks/header/icon-block.css");
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.header {
+  padding: 15px 0;
+  border-bottom: 1px solid gray;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 100px;
+}
+
+.collection, .shop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.collection__title, .shop__title, .social__title {
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+.collection__href, .shop__href, .social__right {
+  padding-top: 10px;
+  text-decoration: none;
+}
+
+.collection__href:hover, .shop__href:hover {
+  text-decoration: underline;
+}
+
+.emblems__tv {
+  background: #55acee url(../images/icons/tw.png) no-repeat center center;
+}
+
+.emblems__fb {
+  background: #3b5998 url(../images/icons/fb.png) no-repeat center center;
+}
+
+.emblems__in {
+  background: #3b5998 url(../images/icons/g.png) no-repeat center center;
+}
 /*# sourceMappingURL=style.css.map */

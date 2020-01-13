@@ -24,11 +24,27 @@
         }
     }
 
-    //d($template);
+    d($template);
     //d($_SESSION['basket']);
     //echo json_encode($template);
 ?>
+<!-- <h1>Корзина</h1>
+<div class='basket'>
+    <div class="basket-products"></div>
 
+    <?php /**foreach( $template['products'] as $product ):**/ ?>
+        <div class="basket__item">
+            <div class="basket__item__photo" style="background-image:url(<?/**=$product['pic']**/?>)"></div>
+            <div class="basket__item__name"><?/**=$product['name']**/?></div>
+            <div class="basket__item__count"><?/**=$product['quantity']**/?></div>
+            <div class="basket__item__price"><?/**=$product['full_price']**/?></div>
+            <button data-id="<?/**=$product['id']**/?>" class="basket__click-plus">+</button>
+            <button data-id="<?/**=$product['id']**/?>" class="basket__click-minus">-</button>
+        </div>     
+    <?/**php endforeach;**/?>
+</div>
+
+<div><?=$template['full_price']?></div> -->
 
 <!-- Начало кода Виноградовой -->
 
@@ -47,8 +63,7 @@
                 <th>Стоимость</th>
                 <th>Удалить</th>
             </tr>
-        </thead>
-        <tbody>   
+            
             <?php foreach( $template['products'] as $product ): ?>
             
             <tr class="table__products"  >
@@ -56,8 +71,10 @@
                     <div class="items__pic" style="background-image:url(<?=$product['pic']?>)"></div>
                 </td>
                 <td class="t-left">
-                    <div class="items__head"><a href="product.php?id=<?=$product['id']?>"><?=$product['name']?></a></div>
-                    <div class="items__sku">арт. <?=$product['sku']?></div>
+                    <!-- <div class="items-left__column flex-column-start"> -->
+                        <div class="items__head"><a href="product.php?id=<?=$product['id']?>"><?=$product['name']?></a></div>
+                        <div class="items__sku">арт. <?=$product['sku']?></div>
+                    <!-- </div> -->
                 </td>
                 <td class="width-0">
                     <div class="item__size"><?=$product['size']?></div>
@@ -78,7 +95,7 @@
                 </td>
             </tr>
             <?php endforeach;?>
-        </tbody> 
+        </thead>
     </table>
 
     <div class="basket__zigzag zigzag">

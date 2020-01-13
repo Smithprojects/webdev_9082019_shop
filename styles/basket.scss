@@ -1,18 +1,305 @@
-* {
-    display: flex;
-    justify-content: center;
-}
+// .basket__item__photo, .items-left__pic {
+//     width: 200px;
+//     height: 200px;
+//     background-position: center center;
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     border: 1px solid gray;
+// }
+
+// .basket {
 
 
-.basket__item {
-    display: flex;
+//     &-products {
+
+
+//         &-item {
+//             display: flex;
+//             //justify-content: space-around;
+
+//             &-pic {
+//                 height: 100px;
+//                 width: 100px;
+//                 background-position: center center;
+//                 background-size: contain;
+//                 background-repeat: no-repeat;
+//                 border: 1px solid gray;
+//             }
+
+//             &-name {
+//                 text-transform: uppercase;
+//                 font-weight: bold;
+//                 font-size: 15px;
+
+//             }
+
+//             &-price {
+
+//             }
+
+//             &-text {
+
+//             }
+
+//             &-sku {
+
+//             }
+
+//             &-quantity {
+
+//             }
+
+//             &-fullprice {
+                
+//             }
+
+
+//         }
+//     }
+
+//     &__click-plus {
+//         height: 20px;
+//         //width: 20px;
+//         background-color: black;
+//         color: #fff;
+//         outline: none;
+//         padding: 10px;
+//     }
+
+//     &__click-minus {
+//         height: 20px;
+//         width: 20px;
+//         background-color: black;
+//         color: #fff;
+//         outline: none;
+        
+//     }
+// }
+
+.basket {
+
+    &__header {
+        
+
+    }
+
+    &__subtitle {
+        
+
+    }
+
+    &__table {
+        margin: 50px 0;
+        text-align: center;
+        border-collapse: separate;
+        border: 1px solid #ddd;
+        border-spacing: 10px;
+        border-radius: 3px;
+        background:#fdfdfd;
+        font-size: 14px;
+        width: 100%;
+        //vertical-align: middle;
     
-}
-.basket__item__foto {
-    width: 200px;
-    height: 200px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
+        .table__head {
+            //text-align: center;
+            font-size: 18px;
+            color: grey;
+            text-transform: uppercase;
+          
+            
+           
+        }
     
+        .table__products {
+    
+    
+            .items__pic {
+                height: 100px;
+                width: 100px;
+                //width: 100%;
+                background-position: center center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                border: 1px solid gray;
+    
+            }
+    
+            .items__head {
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: bold;
+                position: relative;
+                
+                a {
+                    text-decoration: none;
+                }
+    
+            }
+    
+            .items__sku {
+                padding-top: 2px;
+                font-size: 10px;
+                color: grey;
+               position: absolute;
+    
+            }
+    
+            .items__size {
+    
+            }
+    
+            
+            .item__quantity-button {
+                display: flex;
+                justify-content: center;
+    
+                
+                .quantity-button_btn {
+                    cursor: pointer;
+                    border: 1px solid black;
+                    width: 20px;
+                    height: 20px;
+                    line-height: 20px;
+                }
+    
+                .item__quantity-number {
+                    padding: 0 20px;
+                    line-height: 20px;
+                    width: 20px;
+                    height: 20px;
+    
+                }
+            }
+
+            .item-delete {
+                line-height: 20px;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                margin: 0 auto;
+                font-weight: 600;
+                border: 1px solid black;
+                cursor: pointer;
+            }
+        }
+    }
 }
+
+// блок заголовков
+.head {
+    &__title {
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    &__subtitle {
+        text-align: center;
+        font-size: 18px;
+        color: grey;
+        font-style: italic;
+    }
+}
+
+.t-left {
+    text-align: left;
+}
+
+.width-0 {
+    width: 0;
+}
+
+// блок формы
+
+.form {
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    &__label {
+        font-size: 16px;
+        margin: 10px 0px;
+        text-transform: uppercase;
+    }
+
+    &__select {
+        padding: 10px 0px 10px 20px;
+        border: 1px solid grey;
+        border-radius: 3px;
+        color: grey;
+
+        .select__value {
+            
+        }
+    }
+
+    &__input {
+        
+        &[type="text"] {
+            padding: 10px 0px 10px 20px;
+            border: 1px solid grey;
+            border-radius: 3px;
+        }
+    }
+
+    &__submit {
+        padding: 20px 70px;
+        background-color: indianred;
+        text-transform: uppercase;
+        color: #fff;
+        border-radius: 5px;
+        margin-top: 50px;
+
+    }
+}
+
+//блок оплаты
+.payment {
+    text-align: center;
+    padding-top: 30px;
+
+    &__head {
+        padding-bottom: 30px;
+
+    }
+
+    &__info {
+
+    }
+
+    &__price {
+        padding: 10px;
+    }
+
+    &__delivery {
+        padding: 10px;
+    }
+
+    &__price-delivery {
+        padding: 10px;
+    }
+
+    &__options {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    &__select {
+        padding: 10px 0px 10px 20px;
+        border: 1px solid grey;
+        border-radius: 3px;
+        color: grey;
+
+    }
+}
+

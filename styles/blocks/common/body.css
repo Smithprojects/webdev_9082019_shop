@@ -1,5 +1,9 @@
 body {
     background: rgb(226, 226, 226);
     padding: 40px 0;
-    color:green;
+    color:black;
+}
+
+a {
+    color: black;
 }

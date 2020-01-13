@@ -3,28 +3,88 @@ class Catalog{
         this.el = document.querySelector('.catalog');
         this.id = this.el.getAttribute('data-catalog-id');
         this.products = [];
+        this.filters();
     }
-    load(numPage = 1){
+    load(numPage = 1, val_category = 'all', val_size = 'all', val_price = 'all'){
         this.preloaderStart();
+        let categoryValue;
+        let sizeValue;
+        let priceValue;
+
+        if(val_category == 'all') {
+            categoryValue = '';
+        } else {
+            categoryValue = `&category=${val_category}`;
+        }
+
+        if(val_size == 'all') {
+            sizeValue = '';
+        } else {
+            sizeValue = `&size=${val_size}`;
+        }
+
+        if(val_price == 'all') {
+            priceValue = '';
+        } else {
+            let priceValueMin = val_price.split('-')[0];
+            let priceValueMax = val_price.split('-')[1];
+
+            console.log(priceValueMin);
+            console.log(priceValueMax);
+
+            priceValue = `&priceMin=${priceValueMin}&priceMax=${priceValueMax}`;
+
+        }
 
         let xhr = new XMLHttpRequest();
-        xhr.open('GET', `/handlers/catalogHandler.php?id=${this.id}&nowPage=${numPage}`);
+        xhr.open('GET', `/handlers/catalogHandler.php?id=${this.id}&nowPage=${numPage}${categoryValue}${sizeValue}${priceValue}`);
+        console.log(xhr);
         xhr.send();
+        //console.dir(xhr);
         // this.preloadStart();
         xhr.addEventListener('load', ()=>{
             this.clearAll();
 
             let data = JSON.parse(xhr.responseText);
-            console.log(data);
+            console.log(data.pagination.nowPage);
             data.products.forEach((product)=>{
                 this.products.push( new Product(product) );
             });
+
             // this.preloadStop();
+            //console.log(data);
             
             this.renderProducts();
             this.renderPagination(data.pagination);
             this.preloaderStop();
+            //this.filters();
         });
+    }
+    filters(){
+        let that = this;
+        let filters = this.el.querySelector('.catalog-filters');
+        let select = filters.querySelectorAll('.catalog-filters-select');
+        let filterCategory = filters.querySelector('.category');
+        let filterSize = filters.querySelector('.size');
+        let filterPrice = filters.querySelector('.price');
+        select.forEach((selectVal)=>{
+            //console.log(selectVal);
+            selectVal.addEventListener('change', function(){
+                let n_category = filterCategory.options.selectedIndex;
+                let val_category = filterCategory.options[n_category].value;
+                let n_size = filterSize.options.selectedIndex;
+                let val_size= filterSize.options[n_size].value;
+                let n_price = filterPrice.options.selectedIndex;
+                let val_price= filterPrice.options[n_price].value;
+                console.log(select);
+               //console.log(val_category);
+                //console.log(val_size);
+                console.log(n_size);
+                that.load(1, val_category, val_size, val_price);
+            });
+        });
+
+        
     }
     renderPagination(pagination){
         let catalogPaginationEl = this.el.querySelector('.catalog-pagination');
@@ -101,5 +161,5 @@ class Product{
 }
 
 let catalog = new Catalog();
-console.log(catalog);
+//console.log(catalog);
 catalog.load();

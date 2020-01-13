@@ -6,6 +6,10 @@
     margin: 0 10px;
 }
 
+.menu__link:hover {
+    color: orange;
+}
+
 .menu__link_color-orange {
     color: orange;
 }
